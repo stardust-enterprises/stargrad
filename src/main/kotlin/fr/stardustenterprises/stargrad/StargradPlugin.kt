@@ -1,9 +1,9 @@
-package fr.stardustenterprises.gradle.common
+package fr.stardustenterprises.stargrad
 
-import fr.stardustenterprises.gradle.common.ext.Extension
-import fr.stardustenterprises.gradle.common.task.ConfigurableTask
-import fr.stardustenterprises.gradle.common.task.StargradTask
-import fr.stardustenterprises.gradle.common.task.Task
+import fr.stardustenterprises.stargrad.ext.Extension
+import fr.stardustenterprises.stargrad.task.ConfigurableTask
+import fr.stardustenterprises.stargrad.task.StargradTask
+import fr.stardustenterprises.stargrad.task.Task
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.tasks.TaskProvider

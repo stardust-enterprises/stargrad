@@ -1,4 +1,4 @@
-package fr.stardustenterprises.gradle.common.task
+package fr.stardustenterprises.stargrad.task
 
 import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.TaskAction

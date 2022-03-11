@@ -1,4 +1,4 @@
-package fr.stardustenterprises.gradle.common.ext
+package fr.stardustenterprises.stargrad.ext
 
 @Target(AnnotationTarget.CLASS)
 @Retention(AnnotationRetention.RUNTIME)
