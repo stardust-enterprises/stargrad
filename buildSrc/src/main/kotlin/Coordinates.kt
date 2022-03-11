@@ -1,10 +1,10 @@
 object Coordinates {
-    const val NAME = "kotlin-template"
-    const val DESC = "Project description."
+    const val NAME = "stargrad"
+    const val DESC = "Common library for our gradle plugins."
     const val REPO_ID = "stardust-enterprises/$NAME"
 
     const val GROUP = "fr.stardustenterprises"
-    const val VERSION = "0.0.1"
+    const val VERSION = "0.1.0"
 }
 
 object Pom {
@@ -12,7 +12,7 @@ object Pom {
         License("ISC License", "https://opensource.org/licenses/ISC")
     )
     val developers = arrayOf(
-        Developer("dev1")
+        Developer("xtrm")
     )
 }
 

@@ -38,6 +38,9 @@ dependencies {
     Dependencies.kotlinModules.forEach {
         implementation("org.jetbrains.kotlin", "kotlin-$it", Plugins.KOTLIN)
     }
+
+    implementation(gradleApi())
+
     testImplementation("org.jetbrains.kotlin", "kotlin-test", Plugins.KOTLIN)
 }
 
