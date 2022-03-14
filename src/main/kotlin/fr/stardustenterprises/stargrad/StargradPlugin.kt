@@ -8,27 +8,36 @@ import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.tasks.TaskProvider
 
+/**
+ * Superclass of any Stargrad plugin.
+ *
+ * @author xtrm
+ * @since 0.1.0
+ */
 abstract class StargradPlugin : Plugin<Project> {
     protected lateinit var project: Project
         private set
 
     abstract val pluginId: String
 
-    private val postHooks = mutableListOf<Runnable>()
+    private val postHooks: MutableList<Runnable> =
+        mutableListOf()
 
     open fun applyPlugin() = Unit
+
     open fun afterEvaluate(project: Project) = Unit
 
-    override fun apply(target: Project) {
+    final override fun apply(target: Project) {
         this.project = target
-
         applyPlugin()
 
-        this.project.afterEvaluate {
-            conflictsWithPlugins().firstOrNull(this.project.pluginManager::hasPlugin) ?: it.run {
+        this.project.afterEvaluate { proj ->
+            conflictsWithPlugins().firstOrNull(
+                this.project.pluginManager::hasPlugin
+            ) ?: proj.run {
                 postHooks.forEach(Runnable::run)
 
-                afterEvaluate(this)
+                afterEvaluate(proj)
                 return@afterEvaluate
             }
             val present = conflictsWithPlugins().filter(project.pluginManager::hasPlugin).toList()
@@ -45,10 +54,16 @@ abstract class StargradPlugin : Plugin<Project> {
         return this.project.extensions.create(extensionAnnotation.name, extensionClass)
     }
 
-    protected fun <T : StargradTask> task(taskClass: Class<out T>): TaskProvider<out T> {
+    protected fun <T : StargradTask> task(
+        taskClass: Class<out T>,
+    ): TaskProvider<out T> {
         val taskAnnotation = taskClass.getDeclaredAnnotation(Task::class.java)
             ?: throw RuntimeException("Task class missing @Task annotation!")
-        return this.project.tasks.register(taskAnnotation.name, taskClass).also {
+
+        return this.project.tasks.register(
+            taskAnnotation.name,
+            taskClass
+        ).also {
             if (taskAnnotation.group != "NO-GROUP") {
                 it.get().group = taskAnnotation.group
             }
@@ -61,7 +76,7 @@ abstract class StargradPlugin : Plugin<Project> {
     ): TaskProvider<out C> {
         val task = this.task(configurableTask)
         this.postHooks.add {
-            configureBlock.invoke(task.get())
+            task.configure(configureBlock)
         }
         return task
     }

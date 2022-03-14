@@ -9,6 +9,5 @@ object Plugins {
 
 object Dependencies {
     const val KOTLIN = kotlinVersion
-
     val kotlinModules = arrayOf("stdlib")
 }
