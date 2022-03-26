@@ -40,7 +40,6 @@ dependencies {
     }
 
     implementation(gradleApi())
-
     testImplementation("org.jetbrains.kotlin", "kotlin-test", Plugins.KOTLIN)
 }
 
@@ -230,7 +229,16 @@ publishing.publications {
         }
 
         // Configure the signing extension to sign this Maven artifact.
-        signing.sign(this)
+        signing {
+            // Do not sign if we're publishing to maven local
+            setRequired {
+                gradle.taskGraph.allTasks.any {
+                    it is PublishToMavenRepository
+                }
+            }
+
+            sign(this@create)
+        }
     }
 }
 

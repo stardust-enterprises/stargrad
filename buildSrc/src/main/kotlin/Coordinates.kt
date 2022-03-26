@@ -4,17 +4,24 @@ object Coordinates {
     const val REPO_ID = "stardust-enterprises/$NAME"
 
     const val GROUP = "fr.stardustenterprises"
-    const val VERSION = "0.2.0"
+    const val VERSION = "0.4.0"
 }
 
 object Pom {
     val licenses = arrayOf(
         License("ISC License", "https://opensource.org/licenses/ISC")
     )
+
     val developers = arrayOf(
-        Developer("xtrm")
+        Developer("xtrm"),
+        Developer("lambdagg")
     )
 }
 
-data class License(val name: String, val url: String, val distribution: String = "repo")
+data class License(
+    val name: String,
+    val url: String,
+    val distribution: String = "repo"
+)
+
 data class Developer(val id: String, val name: String = id)
