@@ -230,13 +230,7 @@ publishing.publications {
 
         // Configure the signing extension to sign this Maven artifact.
         signing {
-            // Do not sign if we're publishing to maven local
-            setRequired {
-                gradle.taskGraph.allTasks.any {
-                    it is PublishToMavenRepository
-                }
-            }
-
+            isRequired = project.properties["signing.keyId"] != null
             sign(this@create)
         }
     }
