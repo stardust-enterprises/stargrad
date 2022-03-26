@@ -1,7 +1,13 @@
 package fr.stardustenterprises.stargrad.ext
 
+/**
+ * Used to annotate extensions, giving them a name.
+ *
+ * @author xtrm
+ * @since 0.1.0
+ */
 @Target(AnnotationTarget.CLASS)
 @Retention(AnnotationRetention.RUNTIME)
 annotation class Extension(
-    val name: String
+    val name: String,
 )
