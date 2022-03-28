@@ -11,17 +11,30 @@ import org.gradle.api.tasks.Internal
  * @since 0.1.0
  */
 @Suppress("unused")
-abstract class ConfigurableTask<T : StargradExtension> : StargradTask() {
-    private var _configuration: T? = null
+abstract class ConfigurableTask<E : StargradExtension> : StargradTask() {
+    private var _configuration: E? = null
 
+    /**
+     * The [StargradExtension] corresponding to this task's configuration.
+     */
     @get:Internal
-    protected val configuration: T
+    protected val configuration: E
         get() = _configuration!!
 
-    abstract fun applyConfiguration()
+    /**
+     * The method to execute when applying a new [configuration] value.
+     */
+    protected abstract fun applyConfiguration()
 
-    fun configure(configuration: T) {
+    /**
+     * Configure this task using the given [configuration].
+     *
+     * @param configuration The new configuration.
+     *
+     * @return This instance.
+     */
+    fun configure(configuration: E) = apply {
         this._configuration = configuration
-        applyConfiguration()
+        this.applyConfiguration()
     }
 }

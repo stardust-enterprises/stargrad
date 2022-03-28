@@ -11,6 +11,13 @@ import fr.stardustenterprises.stargrad.DEFAULT_TASK_GROUP
 @Target(AnnotationTarget.CLASS)
 @Retention(AnnotationRetention.RUNTIME)
 annotation class Task(
+    /**
+     * This task's name.
+     */
     val name: String,
+
+    /**
+     * This task's group.
+     */
     val group: String = DEFAULT_TASK_GROUP,
 )
