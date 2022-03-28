@@ -12,6 +12,8 @@ import org.gradle.api.tasks.TaskAction
  * @since 0.1.0
  */
 abstract class StargradTask : DefaultTask() {
-    @TaskAction
-    abstract fun run()
+    /**
+     * The method to run when this task has to.
+     */
+    @TaskAction abstract fun run()
 }

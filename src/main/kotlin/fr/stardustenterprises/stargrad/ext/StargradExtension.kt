@@ -20,7 +20,11 @@ import javax.inject.Inject
 @Suppress("unused")
 abstract class StargradExtension
 @Inject constructor(
-    protected val project: Project
+    /**
+     * The Gradle [Project] instance to which this
+     * [plugin][fr.stardustenterprises.stargrad.StargradPlugin] applies to.
+     */
+    protected val project: Project,
 ) {
     /**
      * The [ObjectFactory] of the current [project].
