@@ -124,6 +124,26 @@ tasks {
 
         from("LICENSE")
     }
+
+    afterEvaluate {
+        // Task priority
+        val publishToSonatype by getting
+        val closeAndReleaseSonatypeStagingRepository by getting
+
+        closeAndReleaseSonatypeStagingRepository
+            .mustRunAfter(publishToSonatype)
+
+        // Wrapper task since calling both one after the other in IntelliJ
+        // seems to cause some problems.
+        create("releaseToSonatype") {
+            group = "publishing"
+
+            dependsOn(
+                publishToSonatype,
+                closeAndReleaseSonatypeStagingRepository
+            )
+        }
+    }
 }
 
 // Define the default artifacts' tasks
