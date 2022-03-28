@@ -18,6 +18,13 @@ import org.gradle.api.tasks.TaskProvider
  */
 @Suppress("unused", "MemberVisibilityCanBePrivate")
 abstract class StargradPlugin : Plugin<Project> {
+    companion object {
+        /**
+         * The default task group notation.
+         */
+        internal const val DEFAULT_TASK_GROUP = "NO-GROUP"
+    }
+
     /**
      * The unique identifier of this Gradle plugin.
      */

@@ -1,6 +1,6 @@
 package fr.stardustenterprises.stargrad.task
 
-import fr.stardustenterprises.stargrad.DEFAULT_TASK_GROUP
+import fr.stardustenterprises.stargrad.StargradPlugin
 
 /**
  * Used to annotate standalone tasks, giving them a name and a group.
@@ -19,5 +19,5 @@ annotation class Task(
     /**
      * This task's group.
      */
-    val group: String = DEFAULT_TASK_GROUP,
+    val group: String = StargradPlugin.DEFAULT_TASK_GROUP,
 )
