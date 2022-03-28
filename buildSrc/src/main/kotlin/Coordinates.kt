@@ -1,27 +1,27 @@
 object Coordinates {
-    const val NAME = "stargrad"
-    const val DESC = "Common library for our gradle plugins."
-    const val REPO_ID = "stardust-enterprises/$NAME"
+    const val name = "stargrad"
+    const val desc = "Common library for our gradle plugins."
+    const val repoId = "stardust-enterprises/$name"
 
-    const val GROUP = "fr.stardustenterprises"
-    const val VERSION = "0.4.0"
+    const val group = "fr.stardustenterprises"
+    const val version = "0.5.0"
 }
 
 object Pom {
     val licenses = arrayOf(
-        License("ISC License", "https://opensource.org/licenses/ISC")
+        License("ISC License", "https://opensource.org/licenses/ISC"),
     )
 
     val developers = arrayOf(
         Developer("xtrm"),
-        Developer("lambdagg")
+        Developer("lambdagg"),
     )
 }
 
 data class License(
     val name: String,
     val url: String,
-    val distribution: String = "repo"
+    val distribution: String = "repo",
 )
 
 data class Developer(val id: String, val name: String = id)
