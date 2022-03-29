@@ -24,7 +24,7 @@ abstract class ConfigurableTask<E : StargradExtension> : StargradTask() {
     /**
      * The method to execute when applying a new [configuration] value.
      */
-    protected abstract fun applyConfiguration()
+    protected open fun applyConfiguration() = Unit
 
     /**
      * Configure this task using the given [configuration].
