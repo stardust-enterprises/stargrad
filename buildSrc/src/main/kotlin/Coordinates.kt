@@ -4,7 +4,7 @@ object Coordinates {
     const val repoId = "stardust-enterprises/$name"
 
     const val group = "fr.stardustenterprises"
-    const val version = "0.5.0"
+    const val version = "0.5.1"
 }
 
 object Pom {
