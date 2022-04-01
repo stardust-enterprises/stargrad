@@ -83,6 +83,7 @@ abstract class StargradPlugin : Plugin<Project> {
      */
     protected fun <T : StargradExtension> registerExtension(
         extensionClass: Class<T>,
+        vararg objects: Any? = emptyArray(),
     ): T =
         this.project.extensions.create(
             extensionClass.getDeclaredAnnotation(Extension::class.java)
@@ -90,7 +91,8 @@ abstract class StargradPlugin : Plugin<Project> {
                 ?: throw RuntimeException(
                     "Extension class missing @Extension annotation!"
                 ),
-            extensionClass
+            extensionClass,
+            *objects
         )
 
     /**
@@ -138,19 +140,20 @@ abstract class StargradPlugin : Plugin<Project> {
     /**
      * @see registerExtension
      */
-    protected inline fun <reified T : StargradExtension>
-        registerExtension(): T = registerExtension(T::class.java)
+    protected inline fun <reified T : StargradExtension> registerExtension(
+        vararg objects: Any? = emptyArray(),
+    ): T = registerExtension(T::class.java, *objects)
 
     /**
      * @see registerTask
      */
     protected inline fun <reified T : StargradTask>
-        registerTask(): TaskProvider<T> = registerTask(T::class.java)
+    registerTask(): TaskProvider<T> = registerTask(T::class.java)
 
     /**
      * @see registerTask
      */
     protected inline fun <reified T : ConfigurableTask<*>> registerTask(
-        noinline configureBlock: T.() -> Unit
+        noinline configureBlock: T.() -> Unit,
     ) = this.registerTask(T::class.java, configureBlock)
 }
