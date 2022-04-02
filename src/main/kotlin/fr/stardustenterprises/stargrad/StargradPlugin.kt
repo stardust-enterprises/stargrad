@@ -117,8 +117,7 @@ abstract class StargradPlugin : Plugin<Project> {
     }
 
     /**
-     * Registers the given configurable task using its
-     * [@Task annotation][Task].
+     * Registers the given configurable task using its [@Task annotation][Task].
      *
      * @param configurableTaskClass The class of the extension to register.
      * @param configureBlock The block that will handle the given task's
@@ -147,8 +146,8 @@ abstract class StargradPlugin : Plugin<Project> {
     /**
      * @see registerTask
      */
-    protected inline fun <reified T : StargradTask>
-    registerTask(): TaskProvider<T> = registerTask(T::class.java)
+    protected inline fun <reified T : StargradTask> registerTask(): TaskProvider<T> =
+        registerTask(T::class.java)
 
     /**
      * @see registerTask
