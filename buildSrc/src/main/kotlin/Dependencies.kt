@@ -1,8 +1,8 @@
 object Plugins {
-    const val kotlinVersion = "1.6.10"
-    const val dokkaVersion = kotlinVersion
+    const val kotlinVersion = "1.7.20"
+    const val dokkaVersion = "1.7.10"
     const val nexusPublishVersion = "1.0.0"
-    const val ktLintVersion = "10.2.1"
+    const val ktLintVersion = "11.0.0"
 }
 
 object Dependencies {
