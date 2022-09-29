@@ -2,6 +2,7 @@
 
 package fr.stardustenterprises.stargrad.ext
 
+import fr.stardustenterprises.stargrad.StargradPlugin
 import fr.stardustenterprises.stargrad.task.Task
 import org.gradle.api.DefaultTask
 import org.gradle.api.Project
@@ -18,13 +19,17 @@ import javax.inject.Inject
  * @since 0.4.0
  */
 @Suppress("unused")
-abstract class StargradExtension
+abstract class StargradExtension<out T : StargradPlugin>
 @Inject constructor(
     /**
      * The Gradle [Project] instance to which this
-     * [plugin][fr.stardustenterprises.stargrad.StargradPlugin] applies to.
+     * [plugin][StargradPlugin] applies to.
      */
     protected val project: Project,
+    /**
+     * Instance of the owning [plugin][StargradPlugin].
+     */
+    protected val plugin: T
 ) {
     /**
      * The [ObjectFactory] of the current [project].

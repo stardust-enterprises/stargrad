@@ -81,9 +81,9 @@ abstract class StargradPlugin : Plugin<Project> {
      *
      * @return The registered extension.
      */
-    protected fun <T : StargradExtension> registerExtension(
+    protected fun <T : StargradExtension<*>> registerExtension(
         extensionClass: Class<T>,
-        vararg objects: Any? = emptyArray(),
+        vararg objects: Any? = arrayOf(this@StargradPlugin),
     ): T =
         this.project.extensions.create(
             extensionClass.getDeclaredAnnotation(Extension::class.java)
@@ -139,8 +139,8 @@ abstract class StargradPlugin : Plugin<Project> {
     /**
      * @see registerExtension
      */
-    protected inline fun <reified T : StargradExtension> registerExtension(
-        vararg objects: Any? = emptyArray(),
+    protected inline fun <reified T : StargradExtension<*>> registerExtension(
+        vararg objects: Any? = arrayOf(this@StargradPlugin),
     ): T = registerExtension(T::class.java, *objects)
 
     /**

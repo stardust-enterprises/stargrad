@@ -11,7 +11,7 @@ import org.gradle.api.tasks.Internal
  * @since 0.1.0
  */
 @Suppress("unused")
-abstract class ConfigurableTask<E : StargradExtension> : StargradTask() {
+abstract class ConfigurableTask<E : StargradExtension<*>> : StargradTask() {
     private var _configuration: E? = null
 
     /**
