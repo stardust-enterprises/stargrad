@@ -12,7 +12,7 @@ you can import [stargrad][project-url] from [maven central][mvnc] just by adding
 
 ```kotlin
 dependencies {
-    implementation("fr.stardustenterprises:stargrad:0.5.4")
+    implementation("enterprises.stardust:stargrad:0.5.4")
 }
 ```
 
@@ -20,7 +20,7 @@ dependencies {
 
 ```xml
 <dependency>
-    <groupId>fr.stardustenterprises</groupId>
+    <groupId>enterprises.stardust</groupId>
     <artifactId>stargrad</artifactId>
     <version>0.5.4</version>
 </dependency>

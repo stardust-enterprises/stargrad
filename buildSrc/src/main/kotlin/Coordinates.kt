@@ -3,7 +3,7 @@ object Coordinates {
     const val desc = "Common library for our gradle plugins."
     const val repoId = "stardust-enterprises/$name"
 
-    const val group = "fr.stardustenterprises"
+    const val group = "enterprises.stardust"
     const val version = "0.5.4"
 }
 
