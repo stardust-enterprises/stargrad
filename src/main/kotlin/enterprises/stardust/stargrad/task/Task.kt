@@ -1,6 +1,6 @@
-package fr.stardustenterprises.stargrad.task
+package enterprises.stardust.stargrad.task
 
-import fr.stardustenterprises.stargrad.StargradPlugin
+import enterprises.stardust.stargrad.StargradPlugin
 
 /**
  * Used to annotate standalone tasks, giving them a name and a group.

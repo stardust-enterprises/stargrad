@@ -1,6 +1,6 @@
-package fr.stardustenterprises.stargrad.task
+package enterprises.stardust.stargrad.task
 
-import fr.stardustenterprises.stargrad.ext.StargradExtension
+import enterprises.stardust.stargrad.ext.StargradExtension
 import org.gradle.api.tasks.Internal
 
 /**

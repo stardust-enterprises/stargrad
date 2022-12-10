@@ -48,7 +48,6 @@ ktlint {
 tasks {
     compileKotlin {
         kotlinOptions.jvmTarget = targetVersion
-        kotlinOptions.freeCompilerArgs += "-Xuse-k2"
     }
 
     compileJava {

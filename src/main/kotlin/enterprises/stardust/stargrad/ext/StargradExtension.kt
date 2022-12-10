@@ -1,9 +1,9 @@
 @file:Suppress("MemberVisibilityCanBePrivate")
 
-package fr.stardustenterprises.stargrad.ext
+package enterprises.stardust.stargrad.ext
 
-import fr.stardustenterprises.stargrad.StargradPlugin
-import fr.stardustenterprises.stargrad.task.Task
+import enterprises.stardust.stargrad.StargradPlugin
+import enterprises.stardust.stargrad.task.Task
 import org.gradle.api.DefaultTask
 import org.gradle.api.Project
 import org.gradle.api.model.ObjectFactory

@@ -1,11 +1,11 @@
-package fr.stardustenterprises.stargrad
+package enterprises.stardust.stargrad
 
-import fr.stardustenterprises.stargrad.dsl.applyIf
-import fr.stardustenterprises.stargrad.ext.Extension
-import fr.stardustenterprises.stargrad.ext.StargradExtension
-import fr.stardustenterprises.stargrad.task.ConfigurableTask
-import fr.stardustenterprises.stargrad.task.StargradTask
-import fr.stardustenterprises.stargrad.task.Task
+import enterprises.stardust.stargrad.dsl.applyIf
+import enterprises.stardust.stargrad.ext.Extension
+import enterprises.stardust.stargrad.ext.StargradExtension
+import enterprises.stardust.stargrad.task.ConfigurableTask
+import enterprises.stardust.stargrad.task.StargradTask
+import enterprises.stardust.stargrad.task.Task
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.tasks.TaskProvider

@@ -1,6 +1,6 @@
 @file:Suppress("unused")
 
-package fr.stardustenterprises.stargrad.dsl
+package enterprises.stardust.stargrad.dsl
 
 /**
  * Applies the given [block] if the [if] value is true, only return the

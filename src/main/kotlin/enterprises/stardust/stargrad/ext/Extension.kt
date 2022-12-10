@@ -1,4 +1,4 @@
-package fr.stardustenterprises.stargrad.ext
+package enterprises.stardust.stargrad.ext
 
 /**
  * Used to annotate extensions, giving them a name.
