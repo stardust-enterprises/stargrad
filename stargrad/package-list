@@ -1,0 +1,33 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:enterprises.stardust.stargrad.dsl////PointingToDeclaration/stargrad/enterprises.stardust.stargrad.dsl/index.html
+$dokka.location:enterprises.stardust.stargrad.dsl//applyIf/TypeParam(bounds=[kotlin.Any?])#kotlin.Boolean#kotlin.Function1[TypeParam(bounds=[kotlin.Any?]),kotlin.Unit]/PointingToDeclaration/stargrad/enterprises.stardust.stargrad.dsl/apply-if.html
+$dokka.location:enterprises.stardust.stargrad.dsl//applyIf/TypeParam(bounds=[kotlin.Any?])#kotlin.Function1[TypeParam(bounds=[kotlin.Any?]),kotlin.Boolean]#kotlin.Function1[TypeParam(bounds=[kotlin.Any?]),kotlin.Unit]/PointingToDeclaration/stargrad/enterprises.stardust.stargrad.dsl/apply-if.html
+$dokka.location:enterprises.stardust.stargrad.ext////PointingToDeclaration/stargrad/enterprises.stardust.stargrad.ext/index.html
+$dokka.location:enterprises.stardust.stargrad.ext/Extension///PointingToDeclaration/stargrad/enterprises.stardust.stargrad.ext/-extension/index.html
+$dokka.location:enterprises.stardust.stargrad.ext/Extension/Extension/#kotlin.String/PointingToDeclaration/stargrad/enterprises.stardust.stargrad.ext/-extension/-extension.html
+$dokka.location:enterprises.stardust.stargrad.ext/Extension/name/#/PointingToDeclaration/stargrad/enterprises.stardust.stargrad.ext/-extension/name.html
+$dokka.location:enterprises.stardust.stargrad.ext/StargradExtension///PointingToDeclaration/stargrad/enterprises.stardust.stargrad.ext/-stargrad-extension/index.html
+$dokka.location:enterprises.stardust.stargrad.ext/StargradExtension/StargradExtension/#org.gradle.api.Project#TypeParam(bounds=[enterprises.stardust.stargrad.StargradPlugin])/PointingToDeclaration/stargrad/enterprises.stardust.stargrad.ext/-stargrad-extension/-stargrad-extension.html
+$dokka.location:enterprises.stardust.stargrad.task////PointingToDeclaration/stargrad/enterprises.stardust.stargrad.task/index.html
+$dokka.location:enterprises.stardust.stargrad.task/ConfigurableTask///PointingToDeclaration/stargrad/enterprises.stardust.stargrad.task/-configurable-task/index.html
+$dokka.location:enterprises.stardust.stargrad.task/ConfigurableTask/ConfigurableTask/#/PointingToDeclaration/stargrad/enterprises.stardust.stargrad.task/-configurable-task/-configurable-task.html
+$dokka.location:enterprises.stardust.stargrad.task/ConfigurableTask/configure/#TypeParam(bounds=[enterprises.stardust.stargrad.ext.StargradExtension[*]])/PointingToDeclaration/stargrad/enterprises.stardust.stargrad.task/-configurable-task/configure.html
+$dokka.location:enterprises.stardust.stargrad.task/StargradTask///PointingToDeclaration/stargrad/enterprises.stardust.stargrad.task/-stargrad-task/index.html
+$dokka.location:enterprises.stardust.stargrad.task/StargradTask/StargradTask/#/PointingToDeclaration/stargrad/enterprises.stardust.stargrad.task/-stargrad-task/-stargrad-task.html
+$dokka.location:enterprises.stardust.stargrad.task/StargradTask/run/#/PointingToDeclaration/stargrad/enterprises.stardust.stargrad.task/-stargrad-task/run.html
+$dokka.location:enterprises.stardust.stargrad.task/Task///PointingToDeclaration/stargrad/enterprises.stardust.stargrad.task/-task/index.html
+$dokka.location:enterprises.stardust.stargrad.task/Task/Task/#kotlin.String#kotlin.String/PointingToDeclaration/stargrad/enterprises.stardust.stargrad.task/-task/-task.html
+$dokka.location:enterprises.stardust.stargrad.task/Task/group/#/PointingToDeclaration/stargrad/enterprises.stardust.stargrad.task/-task/group.html
+$dokka.location:enterprises.stardust.stargrad.task/Task/name/#/PointingToDeclaration/stargrad/enterprises.stardust.stargrad.task/-task/name.html
+$dokka.location:enterprises.stardust.stargrad////PointingToDeclaration/stargrad/enterprises.stardust.stargrad/index.html
+$dokka.location:enterprises.stardust.stargrad/StargradPlugin.Companion///PointingToDeclaration/stargrad/enterprises.stardust.stargrad/-stargrad-plugin/-companion/index.html
+$dokka.location:enterprises.stardust.stargrad/StargradPlugin///PointingToDeclaration/stargrad/enterprises.stardust.stargrad/-stargrad-plugin/index.html
+$dokka.location:enterprises.stardust.stargrad/StargradPlugin/StargradPlugin/#/PointingToDeclaration/stargrad/enterprises.stardust.stargrad/-stargrad-plugin/-stargrad-plugin.html
+$dokka.location:enterprises.stardust.stargrad/StargradPlugin/apply/#org.gradle.api.Project/PointingToDeclaration/stargrad/enterprises.stardust.stargrad/-stargrad-plugin/apply.html
+$dokka.location:enterprises.stardust.stargrad/StargradPlugin/id/#/PointingToDeclaration/stargrad/enterprises.stardust.stargrad/-stargrad-plugin/id.html
+enterprises.stardust.stargrad
+enterprises.stardust.stargrad.dsl
+enterprises.stardust.stargrad.ext
+enterprises.stardust.stargrad.task
+
